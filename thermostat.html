@@ -8,29 +8,28 @@
 </head>
 
 <body>
-  <div id="temp_display">
-    <h1 id="current_temp_html">Your current Temperature: <span id="current_temperature"></span></h1>
-    <h2 id="error">(if error occurs it will be here)</h2>
-  </div>
-  <div>
-    <button id="reset" value="RESET"></button>
-  </div>
-  <div id="change_temp_div">
-    <form class="change_temp" action="???">
+  <section>
+    <div id="temp_display">
+      <h1 id="current_temp_html">Your current Temperature: <span id="current_temperature"></span></h1>
+      <h2 id="error">(if error occurs it will be here)</h2>
+    </div>
+    <div>
+      <p>
+        <span>Reset temperature: </span><button id="reset" value="RESET"></button>
+      </p>
+    </div>
+    <div id="change_temp_div">
       <input type="text" name="decrease_temp">
-      <input type="?" value="Decrease Temperature">
-    </form>
-    <form class="change_temp" action="???">
+      <input type="submit" value="Decrease Temperature">
       <input type="text" name="increase_temp">
-      <input type="?" value="Increase Te mperature">
-    </form>
-  </div>
-  <div id="power_saving_power_usage_div">
-    <h3 class="label" >POWER SAVE</h3>
-    <button id="power_save_toggle" value="ON"></button> <button value="OFF"></button>
-
-    <h3 class="label" >YOUR ENERGY USAGE</h3> <div id="energy_use_display"> (SOME FORM OF DISPLAY FOR YOUR USAGE)</div>
-  </div>
+      <input type="submit" value="Increase Temperature">
+    </div>
+    <div id="power_saving_power_usage_div">
+      <h3 class="label">Power saving: <input id="power_save_toggle" type="checkbox"></h3>
+      <h3 class="label" >YOUR ENERGY USAGE</h3>
+      <div id="energy_use_display"> (SOME FORM OF DISPLAY FOR YOUR USAGE)</div>
+    </div>
+  </section>
 </body>
 
 </html>
