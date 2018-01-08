@@ -32,12 +32,23 @@ Power saving mode is on by default
 You can reset the temperature to 20 with a reset function
 You can ask about the thermostat's current energy usage: < 18 is low-usage, < 25 is medium-usage, anything else is high-usage.
 
-### Positives 
+### How to use the webpage:
+
+Clone this repository to your own machine
+
+```
+$ git clone git@github.com:Christine-horrocks/Thermostat.git
+```
+
+Navigate to the foulder in your Finder and open the thermostat.html file using a web browser. 
+
+
+### Positives: 
 - I was able to use JavaScript syntax to write the business logic.
 - I was able to TDD the business logic using Jasmine .
 - I was able to use JQuery to hook up the interface. 
 - I was able to create a working webpage. 
 
-### Areas to work on 
+### Areas to work on: 
 - Need to find a way to add errors to let users know why they cannot increase or decrease the temperature at certain times. 
 - Need to make the page more attractive.  
