@@ -42,6 +42,8 @@ $ git clone git@github.com:Christine-horrocks/Thermostat.git
 
 Navigate to the foulder in your Finder and open the thermostat.html file using a web browser. 
 
+To run the tests, simply open the SpecRunner.html file using a web browser. 
+
 
 ### Positives: 
 - I was able to use JavaScript syntax to write the business logic.
