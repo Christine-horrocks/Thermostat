@@ -8,6 +8,8 @@ function Thermostat(temp = DEFAULT_TEMP) {
 const MIN_TEMP = 10;
 const MAX_TEMP = 32;
 const POWER_SAVING_MAX_TEMP = 25;
+const LOW_USAGE_LIMIT = 18;
+const MEDIUM_USAGE_LIMIT = 25;
 
 
 Thermostat.prototype.viewTemp = function() {
@@ -35,9 +37,9 @@ Thermostat.prototype.reset = function() {
 };
 
 Thermostat.prototype.currentEnergyUse = function() {
-  if (this.temp < 18) {
+  if (this.temp < LOW_USAGE_LIMIT) {
     return "low-usage";
-  } else if (this.temp < 25) {
+  } else if (this.temp < MEDIUM_USAGE_LIMIT) {
     return "medium-usage";
   } else {
     return "high-usage";
