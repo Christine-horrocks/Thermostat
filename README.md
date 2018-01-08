@@ -10,10 +10,6 @@ Can you read and write JavaScript syntax?
 
 Can you understand the rules that govern the behaviour of the this keyword?
 
-Can you follow the flow of an Ajax request and response? 
-
-Can you follow the flow of control through code that uses callbacks?
-
 Can you encapsulate behaviour in JavaScript?
 
 Can you get visibility effectively in JavaScript?
