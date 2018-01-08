@@ -6,29 +6,34 @@
   <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
   <script src="src/thermostat.js"></script>
   <script src="src/powerSaving.js"></script>
+  <script src="src/interface.js"></script>
 </head>
 
 <body>
   <section>
     <div id="temp_display">
       <h1 id="current_temp_html">Your current Temperature: <span id="current_temperature"></span></h1>
-      <h2 id="error">(if error occurs it will be here)</h2>
     </div>
     <div>
-      <p>
-        <span>Reset temperature: </span><button id="reset" value="RESET"></button>
-      </p>
+      <h2><span>Reset temperature: </span><button id="reset" value="RESET"></button></h2>
     </div>
+
     <div id="change_temp_div">
-      <input type="text" name="decrease_temp">
-      <input type="submit" value="Decrease Temperature">
-      <input type="text" name="increase_temp">
-      <input type="submit" value="Increase Temperature">
+      <h2>Type in the number of degrees you wish to change the temperature by</h2>
+      <form id="dec_temp_form" action="thermostat.html">
+        <input id="dec_temp_input" type="text" name="decrease_temp">
+        <input type="submit" value="Decrease Temperature">
+      </form>
+
+      <form id="inc_temp_form" action="thermostat.html">
+        <input id="inc_temp_input" type="text" name="increase_temp">
+        <input type="submit" value="Increase Temperature">
+      </form>
     </div>
+
     <div id="power_saving_power_usage_div">
-      <h3 class="label">Power saving: <input id="power_save_toggle" type="checkbox"></h3>
-      <h3 class="label" >YOUR ENERGY USAGE</h3>
-      <div id="energy_use_display"> (SOME FORM OF DISPLAY FOR YOUR USAGE)</div>
+      <h3 class="label">Power saving: <button id="power_saving_off" value="OFF">OFF</button><button id="power_saving_on" value="ON">ON</button></h3>
+      <h3 class="label" >YOUR ENERGY USAGE: <span id="energy_use_display"></span></h3>
     </div>
   </section>
 </body>

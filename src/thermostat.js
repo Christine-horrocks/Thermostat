@@ -1,12 +1,13 @@
+const DEFAULT_TEMP = 20;
+
 function Thermostat(temp = DEFAULT_TEMP) {
   this.temp = temp
-  this.powerSaving = new PowerSaving;
+  this.powerSaving = new PowerSaving();
 };
 
-const DEFAULT_TEMP = 20
-const MIN_TEMP = 10
-const MAX_TEMP = 32
-const POWER_SAVING_MAX_TEMP = 25
+const MIN_TEMP = 10;
+const MAX_TEMP = 32;
+const POWER_SAVING_MAX_TEMP = 25;
 
 
 Thermostat.prototype.viewTemp = function() {
@@ -30,16 +31,16 @@ Thermostat.prototype.decTemp = function(num) {
 };
 
 Thermostat.prototype.reset = function() {
-  this.temp = DEFAULT_TEMP
+  this.temp = DEFAULT_TEMP;
 };
 
 Thermostat.prototype.currentEnergyUse = function() {
   if (this.temp < 18) {
-    return "low-usage"
+    return "low-usage";
   } else if (this.temp < 25) {
-    return "medium-usage"
+    return "medium-usage";
   } else {
-    return "high-usage"
+    return "high-usage";
   }
 };
 
