@@ -6,6 +6,17 @@ var thermostat = new Thermostat();
 
   function updateTemperature() {
     $("#current_temperature").text(thermostat.viewTemp());
+    if(thermostat.currentEnergyUse() === 'low-usage') {
+      $("#current_temperature").css('color', 'green');
+      $("#energy_use_display").css('color', 'green');
+    } else if(thermostat.currentEnergyUse() === 'medium-usage') {
+      $("#current_temperature").css('color', 'blue');
+      $("#energy_use_display").css('color', 'blue');
+    } else {
+      $("#current_temperature").css('color', 'red');
+      $("#energy_use_display").css('color', 'red');
+    }
+    // $("#current_temperature").attr('class', thermostat.currentEnergyUse())
   }
 
   function updateEnergyUse() {
@@ -45,4 +56,6 @@ var thermostat = new Thermostat();
       updateTemperature();
       updateEnergyUse();
     });
+
+
 });
