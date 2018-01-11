@@ -3,53 +3,72 @@
 
 <head>
   <title>THERMOSTAT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
   <script src="src/thermostat.js"></script>
   <script src="src/powerSaving.js"></script>
   <script src="src/interface.js"></script>
   <script src="src/weatherAPI.js"></script>
-  <script src="src/thermostat.css"></script>
+  <link href="src/public/thermostat.css" rel="stylesheet"></script>
 </head>
 
 <body>
   <section>
-    <div>
-      <h1>Thermostat</h1>
-    </div>
-    <div id="temp_display">
-      <h1 id="current_temp_html">Your current Temperature: <span id="current_temperature"></span></h1>
-    </div>
-    <div>
-      <h2><span>Reset temperature: </span><button id="reset" value="RESET"></button></h2>
-    </div>
+    <div class="container-fluid">
 
-    <div id="change_temp_div">
-      <h2>Type in the number of degrees you wish to change the temperature by</h2>
-      <form id="dec_temp_form" action="thermostat.html">
-        <input id="dec_temp_input" type="text" name="decrease_temp">
-        <input type="submit" value="Decrease Temperature">
-      </form>
+      <div class="row">
+        <div class="col-sm-3">
+          <h1>_</h1>
+        </div>
+        <div class="col-sm-6" style="background-color:lavender;" id="title_container">
+          <h1>Thermostat</h1>
+        </div>
+        <div class="col-sm-3">
+          <h1>_</h1>
+        </div>
+      </div>
 
-      <form id="inc_temp_form" action="thermostat.html">
-        <input id="inc_temp_input" type="text" name="increase_temp">
-        <input type="submit" value="Increase Temperature">
-      </form>
+      <div id="temp_display">
+        <h2 id="current_temp_html">Your current Temperature: <span id="current_temperature"></span></h2>
+      </div>
+
+      <div>
+        <h2><span>Reset temperature: </span><button id="reset" value="RESET"></button></h2>
+      </div>
+
+      <div id="change_temp_div">
+        <h2>Type in the number of degrees you wish to change the temperature by</h2>
+        <form id="dec_temp_form" action="thermostat.html">
+          <input id="dec_temp_input" type="text" name="decrease_temp">
+          <input type="submit" value="Decrease Temperature">
+        </form>
+
+        <form id="inc_temp_form" action="thermostat.html">
+          <input id="inc_temp_input" type="text" name="increase_temp">
+          <input type="submit" value="Increase Temperature">
+        </form>
+      </div>
+
+      <div id="power_saving_power_usage_div">
+        <h3 class="label">Power saving: <button id="power_saving_off" value="OFF">OFF</button><button id="power_saving_on" value="ON">ON</button></h3>
+        <h3 class="label" >YOUR ENERGY USAGE: <span id="energy_use_display"></span></h3>
+      </div>
+
+      <div id="weatherInfo" >
+        <h2>Add your city:</h2>
+        <form id="select-city">
+          <input id="current-city" type="text" placeholder="Enter a city"></input>
+          <input type="submit"></input>
+        </form>
+        <h2> Current Weather: <span id="current-weather"></span></h2>
+        <h2> Current Temperature: <span id="current-temperature"></span></h2>
+      </div>
+
     </div>
-
-    <div id="power_saving_power_usage_div">
-      <h3 class="label">Power saving: <button id="power_saving_off" value="OFF">OFF</button><button id="power_saving_on" value="ON">ON</button></h3>
-      <h3 class="label" >YOUR ENERGY USAGE: <span id="energy_use_display"></span></h3>
-    </div>
-
-    <div id="weatherInfo" >
-      <form id="select-city">
-        <input id="current-city" type="text" placeholder="Enter a city"></input>
-        <input type="submit"></input>
-      </form>
-      <h1> Current Weather: <span id="current-weather"></span></h1>
-      <h1> Current Temperature: <span id="current-temperature"></span></h1>
-    </div>
-
   </section>
 </body>
 
